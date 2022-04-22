@@ -10,7 +10,10 @@ APP SERVICE: The costs, scalability, and availability for a CMS app deployed thr
 
 VM: The costs, scalability, and availability for a CMS app deployed through a VM are also reasonable. The VM allows for more customization of the app's capability. It also would really benefit developers who have already built a CMS app but it might not be supported through App Service but could work through the VM workflow. It also allows for more fine-tuning, so the developer can customize the VM to optimize their CMS app.
 
-My Choice: I chose App Service because the CMS app is lightweight, does not require robust compute power, and is easy to deploy through Azure. The CMS App is straightforward and runs on a Python codebase, which is supported by App Service. Overall, a simple choice.
+My Choice: App Service 
+
+Justify: Because the CMS app is lightweight, does not require robust compute power, and is easy to deploy through Azure. The CMS App is straightforward and runs on a Python codebase, which is supported by App Service. Overall, a simple choice. Besides, the cost of Azure App Service is lower than VM's in the same tier.
+
 
 ### Assess app changes that would change your decision.
 

@@ -36,7 +36,7 @@ def new_post():
     if form.validate_on_submit():
         post = Post()
         post.save_changes(form, request.files['image_path'], current_user.id, new=True)
-        app.logger.info('Post saved')
+        app.logger.warning('Post saved')
         return redirect(url_for('home'))
     return render_template(
         'post.html',
@@ -72,7 +72,7 @@ def login():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-        app.logger.info("User logged in successful!")
+        app.logger.warning("User logged in successful!")
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('home')
@@ -107,7 +107,7 @@ def authorized():
 @app.route('/logout')
 def logout():
     logout_user()
-    app.logger.info("User logged out")
+    app.logger.warning("User logged out")
     if session.get("user"): # Used MS Login
         # Wipe out user and its token cache from session
         session.clear()
